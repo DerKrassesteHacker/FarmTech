@@ -22,7 +22,6 @@ const PH_DOWN_PUMP_PIN = 3;
 
 SHT31 sht31 = SHT31();
 StandardSensor waterlevelSensor(WATERLEVEL_PIN, 'D'));
-StandardSensor 
 
 float air_temp;
 float humidity;
