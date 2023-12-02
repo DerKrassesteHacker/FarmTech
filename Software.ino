@@ -1,11 +1,12 @@
 // Software.ino
 
 #include <MCP3XXX.h>
-#include "Adafruit_SHT31.h"
+#include "DHT.h"
 #include "StandardSensor.h"
 
 
-int TEMP_HUM_PIN = 0; //A0 on ESP
+#define TEMP_HUM_PIN A0 //A0 on ESP
+#define TEMP_HUM_TYPE DHT22
 
 //Pins on ADC
 const int PH_PIN = 0;
@@ -20,7 +21,7 @@ const int PUMP_REL_PIN = 1;
 const int FERT_PUMP_PIN = 2;
 const int PH_DOWN_PUMP_PIN = 3;
 
-Adafruit_SHT31 sht31 = Adafruit_SHT31();
+DHT dht(TEMP_HUM_PIN, TEMP_HUM_TYPE);
 StandardSensor waterlevelSensor(WATERLEVEL_PIN, 'D');
 
 float air_temp;
@@ -33,7 +34,7 @@ float waterflow;
 
 void setup(){
   Serial.begin(9600);
-  sht31.begin();
+  dht.begin();
 }
 
 void loop(){
@@ -42,12 +43,13 @@ void loop(){
 
   Serial.println("..................................................");
   Serial.print("Waterlevel: "); Serial.println(waterlevel);
-  delay(1000);
+  delay(2000);
 }
 
 void getTempAndHumidity(int pin){
-  air_temp = sht31.readTemperature();
-  humidity = sht31.readHumidity();
+  dht.read(TEMP_HUM_PIN);
+  air_temp = dht.readTemperature();
+  humidity = dht.readHumidity();
   Serial.print("Temperature: "); Serial.print(air_temp); Serial.print(" C     Humidity: "); Serial.print(humidity); Serial.println("%");
   Serial.println();
 }
