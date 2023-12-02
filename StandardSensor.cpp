@@ -6,19 +6,19 @@ StandardSensor::StandardSensor(int pin, char mode) {
   sensorOutput = 42;
   sensorMode = mode;
 
-  if sensorMode == 'A'{
+  if (sensorMode == 'A'){
     adc.begin();
-  }else if sensorMode == 'D'{
+  }else if (sensorMode == 'D'){
     pinMode(sensorPin, INPUT);
   }
 }
 
 int StandardSensor::getSensorData() {
-  if sensorMode == 'A'{
+  if (sensorMode == 'A'){
     sensorOutput = adc.analogRead(sensorPin);
     return sensorOutput;
-  }else if sensorMode == 'D'{
-    sensorOutput = digitalRead(sensorPin)
+  }else if (sensorMode == 'D'){
+    sensorOutput = digitalRead(sensorPin);
   }
   
   return sensorOutput;
