@@ -2,8 +2,7 @@
 
 #include <MCP3XXX.h>
 #include "DHT.h"
-#include "StandardSensor.h"
-
+#include "Sensor.h"
 
 #define TEMP_HUM_PIN A0 //A0 on ESP
 #define TEMP_HUM_TYPE DHT22
@@ -22,7 +21,7 @@ const int FERT_PUMP_PIN = 2;
 const int PH_DOWN_PUMP_PIN = 3;
 
 DHT dht(TEMP_HUM_PIN, TEMP_HUM_TYPE);
-StandardSensor waterlevelSensor(WATERLEVEL_PIN, 'D');
+Sensor waterlevelSensor(WATERLEVEL_PIN, 'D');
 
 float air_temp;
 float humidity;

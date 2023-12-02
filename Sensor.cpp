@@ -1,7 +1,7 @@
-// StandardSensor.cpp
-#include "StandardSensor.h"
+// Sensor.cpp
+#include "Sensor.h"
 
-StandardSensor::StandardSensor(int pin, char mode) {
+Sensor::Sensor(int pin, char mode) {
   sensorPin = pin;
   sensorOutput = 42;
   sensorMode = mode;
@@ -13,7 +13,7 @@ StandardSensor::StandardSensor(int pin, char mode) {
   }
 }
 
-int StandardSensor::getSensorData() {
+int Sensor::getSensorData() {
   if (sensorMode == 'A'){
     sensorOutput = adc.analogRead(sensorPin);
     return sensorOutput;

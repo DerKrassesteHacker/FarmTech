@@ -1,12 +1,12 @@
-// StandardSensor.h
+// Sensor.h
 
-#ifndef StandardSensor_h
-#define StandardSensor_h
+#ifndef Sensor_h
+#define Sensor_h
 
 #include <Arduino.h>
 #include <MCP3XXX.h>
 
-class StandardSensor {
+class Sensor {
   private:
     int sensorPin;
     int sensorOutput;
@@ -14,7 +14,7 @@ class StandardSensor {
     MCP3008 adc;
 
   public:
-    StandardSensor(int pin, char mode);
+    Sensor(int pin, char mode);
     int getSensorData();
 };
 
