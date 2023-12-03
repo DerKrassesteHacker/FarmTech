@@ -21,9 +21,9 @@ const int EC_PIN = 1;
 const int WATERLEVEL_PIN = 0;
 const int WATERTEMP_PIN = 1;
 
-const int PUMP_REL_PIN = 1;
-const int FERT_PUMP_PIN = 2;
-const int PH_DOWN_PUMP_PIN = 3;
+const int PUMP_REL_PIN = 2;
+const int FERT_PUMP_PIN = 3;
+
 
 DHT tempHumSensor(TEMP_HUM_PIN, TEMP_HUM_TYPE);
 Sensor waterlevelSensor(WATERLEVEL_PIN, 'D');
@@ -80,6 +80,8 @@ void measureData(){
   ec.calibration(ec_voltage, watertemp);
 }
 
-
+void controlAndRegulate(){
+  
+}
 
 
