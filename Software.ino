@@ -52,7 +52,6 @@ void loop(){
   
   measureData();
 
-  delay(2000);
 }
 
 void measureData(){
