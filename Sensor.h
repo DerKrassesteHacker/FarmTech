@@ -10,6 +10,7 @@ class Sensor {
   private:
     int sensorPin;
     int sensorOutput;
+    float voltage;
     char sensorMode;
     MCP3008 adc;
 
