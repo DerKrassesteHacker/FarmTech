@@ -18,6 +18,8 @@ const int PH_PIN = 0;
 float pH_calibration_value = 0.0; // 21.34;
 float pH_gradient = 1.0;
 const int EC_PIN = 1;
+const int LIGHT_PIN = 2;
+
 
 //Digital Pins
 const int WATERLEVEL_PIN = 0;
