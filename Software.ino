@@ -10,7 +10,6 @@
 #include "DHT.h"
 #include "Sensor.h"
 
-#define TEMP_HUM_PIN 4 //GPIO4 on ESP
 #define TEMP_HUM_TYPE DHT22
 
 //Pins on ADC
@@ -22,8 +21,9 @@ const int LIGHT_PIN = 2;
 
 
 //Digital Pins
-const int WATERLEVEL_PIN = 0;
-const int WATERTEMP_PIN = 1;
+const int TEMP_HUM_PIN 0 //GPIO0 on ESP
+const int WATERLEVEL_PIN = 1;
+const int WATERTEMP_PIN = 2;
 
 const int PUMP_REL_PIN = 1;
 const int FERT_PUMP_PIN = 2;
