@@ -11,9 +11,9 @@ const int flameDiPin = 14;
 #define WIFI_SSID       "FRIED"
 #define WIFI_PASSWORD   "diehlamfriedhof"
 
-#define REDIS_ADDR      "192.168.0.121" 
+#define REDIS_ADDR      "2001:16b8:317f:6400:308b:afe9:7b96:d378" 
 #define REDIS_PORT      6379 
-#define REDIS_PASSWORD  ""  
+#define REDIS_PASSWORD  "Nudelsuppe"  
 
 Redis redis(REDIS_ADDR, REDIS_PORT);
 

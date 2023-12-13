@@ -1,5 +1,6 @@
 // Sensor.cpp
 #include "Sensor.h"
+#include <iostream>
 
 Sensor::Sensor(int pin, char mode) {
   sensorPin = pin;
@@ -15,13 +16,7 @@ Sensor::Sensor(int pin, char mode) {
 
 int Sensor::getSensorData() {
   if (sensorMode == 'A'){
-    for (int i=0; i<10; i++){
-      sensorOutput += adc.analogRead(sensorPin);
-      delay(30)
-    }
-
-    float avgSensorOutput = sensorOutput/10;
-    sensorOutput = static_cast<int>(avgSensorOutput/1024 * 3300); //Voltage in milliVolt
+    sensorOutput = adc.analogRead(sensorPin);
     
   }else if (sensorMode == 'D'){
     sensorOutput = digitalRead(sensorPin);
