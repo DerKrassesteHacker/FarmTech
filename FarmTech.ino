@@ -103,7 +103,7 @@ bool fert_pump_status = false;
 #define WIFI_SSID "foo"
 #define WIFI_PASSWORD "foobarbaz"
 
-#define REDIS_ADDR "hydroponik.ddns.net"
+#define REDIS_ADDR "redisserver.example.com"
 #define REDIS_PORT 6379
 #define REDIS_PASSWORD "foobar"
 
