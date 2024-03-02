@@ -11,5 +11,5 @@ Software für den ESP8266 für das FarmTech-Projekt. Der ESP8266 liest Sensoren-
 
 ## Appendix
 
-Fühlen Sie sich frei, sich für mehr Informationen unsere Schriftliche Arbeit durchzulesen: [Schriftliche Arbeit FarmTech](https://1drv.ms/b/s!Al8kO8jN3exN-9MDTu4E882jn7C2Gg?e=c0tLEL).
+Fühlen Sie sich frei, sich für mehr Informationen unsere Schriftliche Arbeit zu lesen: [Schriftliche Arbeit FarmTech](https://1drv.ms/b/s!Al8kO8jN3exN-9MDTu4E882jn7C2Gg?e=c0tLEL).
 
